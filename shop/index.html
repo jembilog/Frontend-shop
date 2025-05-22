@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyStore - Online Shop</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="window.location.reload()">MyStore</div>
+  <input type="search" id="search" placeholder="Search products..." />
+  <div class="nav-icons">
+    <button id="darkToggle" class="nav-btn" aria-label="Toggle Dark Mode">🌙</button>
+    <button id="loginBtn" class="nav-btn">Login</button>
+    <button id="signupBtn" class="nav-btn">Signup</button>
+    <div class="cart-icon" title="Shopping Cart">🛒</div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Welcome to MyStore!</h1>
+  <p>Discover our amazing products</p>
+</section>
+
+<section class="categories">
+  <div class="category active" data-category="all">All</div>
+  <div class="category" data-category="bags">Bags</div>
+  <div class="category" data-category="shoes">Shoes</div>
+  <div class="category" data-category="watches">Watches</div>
+  <div class="category" data-category="accessories">Accessories</div>
+</section>
+
+<section class="products" id="product-list">
+  <!-- Products injected by JS -->
+</section>
+
+<footer>
+  &copy; 2025 MyStore. All rights reserved.
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="loginClose">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="loginEmail">Email:</label>
+      <input type="email" id="loginEmail" required />
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="signupClose">&times;</span>
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <label for="signupEmail">Email:</label>
+      <input type="email" id="signupEmail" required />
+      <label for="signupPassword">Password:</label>
+      <input type="password" id="signupPassword" required />
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
